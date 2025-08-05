@@ -81,7 +81,10 @@ img {
 .theme-toggle button:hover {
   background-color: #777;
 }
-.dark-mode main {
+.dark-mode .project-card {
+  background-color: #1e1e1e;
   color: white;
 }
+
+
 
