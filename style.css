@@ -90,8 +90,16 @@ img {
   background-color: #1e1e1e;
   color: white;
 }
+/* --- DARK MODE FIX: Blog post styles --- */
+.dark-mode .blog-post {
+  background-color: #1e1e1e;
+  color: white;
+}
 
+.dark-mode .blog-post h2 {
+  color: #eee;
+}
 
-
-
-
+.dark-mode .blog-post small {
+  color: #aaa;
+}
