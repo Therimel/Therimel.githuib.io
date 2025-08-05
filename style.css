@@ -81,3 +81,7 @@ img {
 .theme-toggle button:hover {
   background-color: #777;
 }
+.dark-mode main {
+  color: white;
+}
+
