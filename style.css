@@ -81,10 +81,17 @@ img {
 .theme-toggle button:hover {
   background-color: #777;
 }
-.dark-mode .project-card {
+.dark-mode .project-card,
+.dark-mode .blog-post,
+.dark-mode .contact-form,
+.dark-mode form,
+.dark-mode input,
+.dark-mode textarea {
   background-color: #1e1e1e;
   color: white;
 }
+
+
 
 
 
