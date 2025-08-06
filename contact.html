@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – Thomas Wong</title>
+  <link rel="stylesheet" href="style.css">
+ <script>
+  function toggleDarkMode() {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+  }
+
+  // Apply saved theme on page 
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("darkMode");
+    if (savedTheme === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+</script>
+
+<link rel="stylesheet" href="style.css">
+
+  <style>
+    h1 {
+      text-align: center;
+      color: #007B7F;
+    }
+
+    form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px 25px; 
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #007B7F;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005f61;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007B7F;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-toggle">
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+
+  <!-- Navigation -->
+  <header>
+  </header>
+
+  <!-- Contact Section -->
+  <main>
+    <h1>Contact Me</h1>
+
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <input type="submit" value="Send Message">
+    </form>
+
+    <div class="social">
+      <p>Connect with me:</p>
+      <a href="https://github.com/Therimel">GitHub</a>
+      <a href="thomas0g@my.yorku.ca">Email</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+ <script src="scripts.js"></script>
+</body>
+</html>
+
+

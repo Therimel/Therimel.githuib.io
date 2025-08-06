@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Implementing Light/Dark Mode Toggle",
+    "date": "2025-08-05",
+    "content": "To implement the light/dark mode toggle in my website (Part One), I started by adding a button to every page that says 'Toggle Dark Mode'. I placed it inside a <div> with the class 'theme-toggle' near the top of the body. Then, in my scripts.js file, I wrote a function called toggleDarkMode(). This function uses document.body.classList.toggle(\"dark-mode\") to either add or remove a CSS class called 'dark-mode' from the body tag. In my CSS file, I defined how the page looks in dark mode by setting background and text color changes when this class is applied.To keep the user's preference between page visits, I used localStorage. If the user turns on dark mode, I save that by running localStorage.setItem(\"darkMode\", \"enabled\"). When the page loads again, I check if localStorage.getItem(\"darkMode\") is set to 'enabled', and if it is, I add the 'dark-mode' class back to the body. This way, the user's choice is remembered across all pages. I made sure the function runs after the DOM has loaded by using window.addEventListener(\"DOMContentLoaded\", ...). This was important to make sure the script doesn't try to access the body element before it exists."
+  },
+  {
+    "title": "Making the Blog Section Dynamic",
+    "date": "2025-08-05",
+    "content": "In Part Two, I created a dynamic blog section on my website using JavaScript and JSON. First, I created a file called posts.json inside a folder named 'data'. This file contains an array of objects, where each object has a title, date, and content field. This acts as my blog post database. Then, in my scripts.js file, I used the fetch() method to load the posts.json file when the page loads. I check if the element with the id 'blog-list' exists, and if it does, I fetch the data using fetch('data/posts.json'). Then I use .then() to convert the response into JSON format. After that, I loop through the list of posts using .forEach() and for each one, I create a new <article> element using document.createElement(). I give it a class of 'blog-post' and set its innerHTML with the post's title, date, and content. Finally, I append each article to the blog-list <div>. This makes it very easy to add new blog posts later. I don’t need to touch the HTML again — I just edit the posts.json file."
+  }
+]

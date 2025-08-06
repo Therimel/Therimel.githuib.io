@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume – Thomas Wong</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  function toggleDarkMode() {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
+  }
+
+  // Apply saved theme on page 
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("darkMode");
+    if (savedTheme === "enabled") {
+      document.body.classList.add("dark-mode");
+    }
+  });
+</script>
+  
+<link rel="stylesheet" href="style.css">
+
+  <style>
+    h1 {
+      color: red;
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      height: 600px;
+      border: 1px solid #ccc;
+    }
+    .download-button {
+      display: block;
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-toggle">
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+  
+  <!-- Navigation -->
+  <header>
+  </header>
+
+  <!-- Resume Section -->
+  <main>
+    <section>
+      <h1>My Resume</h1>
+
+      <div class="download-button">
+        <a href="assets/resume.pdf" download style="font-size: 18px;"> Download Resume (PDF)</a>
+      </div>
+
+      <iframe src="assets/resume.pdf" title="Thomas Wong Resume"></iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+ <script src="scripts.js"></script>
+</body>
+</html>
+
+
